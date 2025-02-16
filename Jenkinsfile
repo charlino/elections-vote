@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKERHUB_USERNAME = "charlino4u"
+        DOCKERHUB_USERNAME = "charlino" //Use your own Docker Username
         DOCKER_IMAGE = "vote"  // Change to your Docker Hub repo name
         DOCKER_TAG = "latest"
         DOCKER_HUB_CREDENTIALS = "docker-hub-credentials"  // Set this in Jenkins credentials
@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/charlino/elections-vote.git'
+                git branch: 'main', url: 'https://github.com/charlino/elections-vote.git' //use your own repo
             }
         }
 
